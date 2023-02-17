@@ -19,9 +19,9 @@ tensorboard>=2.4.1
 pip==23.0
 diffusers
 streamlit-keyup
-time
+datetime
 json
-base64
+
 # wandb
 
 # plotting ------------------------------------
