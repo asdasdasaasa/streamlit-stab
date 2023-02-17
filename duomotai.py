@@ -17,33 +17,33 @@ import json
 # }
 
 @st.cache(allow_output_mutation=True)
-def load_model():
-    # model_id="runwayml/stable-diffusion-v1-5"
-    pipe=DiffusionPipeline.from_pretrained("prompthero/openjourney-v2",torch_dtype=torch.float16).to("cuda")
-    # pipe=StableDiffusionOnnxPipeline.from_pretrained(
-    #     "runwayml/stable-diffusion-v1-5",
-    #     revision="onnx",
-    #     provider="CUDAExecutionProvider",
-    #     #torch_dtype=torch.float16
-    # )
-    # pipe = StableDiffusionOnnxPipeline.from_pretrained(
-    #     "/home/qian/",
-    #     revision="onnx",
-    #     provider="CUDAExecutionProvider",
-    #     # torch_dtype=torch.float16
-    # ).to("cuda")
-    #
-    # pipe=StableDiffusionPipeline.from_pretrained(
-    #     model_id,
-    #     revision="onnx",
-    #     provider="CUDAExecutionProvider",
-    #     # torch_dtype=torch.float16
-    #
-    # ).to("cuda")
-    pipe.enable_xformers_memory_efficient_attention()
-    return pipe
+# def load_model():
+#     # model_id="runwayml/stable-diffusion-v1-5"
+#     pipe=DiffusionPipeline.from_pretrained("prompthero/openjourney-v2",torch_dtype=torch.float16).to("cuda")
+#     # pipe=StableDiffusionOnnxPipeline.from_pretrained(
+#     #     "runwayml/stable-diffusion-v1-5",
+#     #     revision="onnx",
+#     #     provider="CUDAExecutionProvider",
+#     #     #torch_dtype=torch.float16
+#     # )
+#     # pipe = StableDiffusionOnnxPipeline.from_pretrained(
+#     #     "/home/qian/",
+#     #     revision="onnx",
+#     #     provider="CUDAExecutionProvider",
+#     #     # torch_dtype=torch.float16
+#     # ).to("cuda")
+#     #
+#     # pipe=StableDiffusionPipeline.from_pretrained(
+#     #     model_id,
+#     #     revision="onnx",
+#     #     provider="CUDAExecutionProvider",
+#     #     # torch_dtype=torch.float16
+#     #
+#     # ).to("cuda")
+#     pipe.enable_xformers_memory_efficient_attention()
+#     return pipe
 
-pipe=load_model()
+# pipe=load_model()
 
 st.title("AIGC\n")
 st.subheader("输入")
@@ -78,9 +78,9 @@ if a:
 
         start_time=time.time()
         with torch.inference_mode():
-            image=pipe(input_query,negative_prompt=-negative_prompt).images[0]
+#             image=pipe(input_query,negative_prompt=-negative_prompt).images[0]
             print("latency",time.time()-start_time)
-            st.image(image)
+#             st.image(image)
 
 
 
