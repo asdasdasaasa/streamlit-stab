@@ -5,7 +5,7 @@ from PIL import Image
 from diffusers import StableDiffusionPipeline
 from st_keyup import st_keyup
 import torch
-import os
+# import os
 from diffusers import DiffusionPipeline,StableDiffusionOnnxPipeline
 import time
 import json
