@@ -12,16 +12,16 @@ scipy>=1.4.1
 torch>=1.7.0
 torchvision>=0.8.1
 tqdm>=4.41.0
-streamlit
+
+
+# logging -------------------------------------
+tensorboard>=2.4.1
 PIL
-diffusers
+diffusers==0.12.1
 streamlit-keyup
 time
 json
 base64
-
-# logging -------------------------------------
-tensorboard>=2.4.1
 # wandb
 
 # plotting ------------------------------------
