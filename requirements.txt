@@ -17,8 +17,7 @@ pip==23.0
 # logging -------------------------------------
 tensorboard>=2.4.1
 pip==23.0
-PIL
-diffusers==0.12.1
+diffusers
 streamlit-keyup
 time
 json
