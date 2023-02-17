@@ -1,5 +1,5 @@
 import streamlit as st
-import base64
+
 from PIL import Image
 # from st_keyup import st_keyup
 from diffusers import StableDiffusionPipeline
